@@ -1695,12 +1695,26 @@ void CUtlBuffer::PutUnsignedShort( unsigned short s )
 
 void CUtlBuffer::PutInt( int i )
 {
-	PUT_TYPE( int, i );
+    if (!IsText())
+    {
+        PUT_BIN_DATA(int, i);
+    }
+    else
+    {
+        PutString(CNumStr(static_cast<int32_t>(i)));
+    }
 }
 
 void CUtlBuffer::PutUnsignedInt( unsigned int u )
 {
-	PUT_TYPE( unsigned int, u );
+    if (!IsText())
+    {
+        PUT_BIN_DATA(unsigned int, u);
+    }
+    else
+    {
+        PutString(CNumStr(static_cast<uint32_t>(u)));
+    }
 }
 
 void CUtlBuffer::PutFloat( float f )
