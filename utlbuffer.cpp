@@ -1693,11 +1693,11 @@ void CUtlBuffer::PutUnsignedShort( unsigned short s )
 	PUT_TYPE( unsigned short, s );
 }
 
-void CUtlBuffer::PutInt( int i )
+void CUtlBuffer::PutInt( int32_t i )
 {
     if (!IsText())
     {
-        PUT_BIN_DATA(int, i);
+        PUT_BIN_DATA(int32_t, i);
     }
     else
     {
@@ -1705,11 +1705,11 @@ void CUtlBuffer::PutInt( int i )
     }
 }
 
-void CUtlBuffer::PutUnsignedInt( unsigned int u )
+void CUtlBuffer::PutUnsignedInt( uint32_t u )
 {
     if (!IsText())
     {
-        PUT_BIN_DATA(unsigned int, u);
+        PUT_BIN_DATA(uint32_t, u);
     }
     else
     {

@@ -241,8 +241,8 @@ public:
 	void			PutUint8( uint8_t ub );
 	void			PutShort( short s );
 	void			PutUnsignedShort( unsigned short us );
-	void			PutInt( int i );
-	void			PutUnsignedInt( unsigned int u );
+	void			PutInt( int32_t i );
+	void			PutUnsignedInt( uint32_t u );
 	void			PutInt16( int16_t s16 );
 	void			PutUnsignedInt64( uint64_t u64 );
 	void			PutInt64( int64_t u64 );
